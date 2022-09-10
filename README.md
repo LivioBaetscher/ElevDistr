@@ -24,4 +24,4 @@ devtools::install_github("LivioBaetscher/ElevDistr")
 
 ## Further information
 
-A detailed description can be found on the [Wiki](https://github.com/LivioBaetscher/ElevDistr/wiki).
+A detailed description can be found on the [Wiki](https://github.com/LivioBaetscher/ElevDistr/wiki) or the package vignette.
