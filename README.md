@@ -21,3 +21,7 @@ You can install the development version of ElevDistr from
 install.packages("devtools")
 devtools::install_github("LivioBaetscher/ElevDistr")
 ```
+
+## Further information
+
+A detailed description can be found on the [Wiki](https://github.com/LivioBaetscher/ElevDistr/wiki).
