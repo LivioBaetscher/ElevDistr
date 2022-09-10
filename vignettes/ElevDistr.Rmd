@@ -156,7 +156,7 @@ The way the three raster layers are loaded in this tutorial, is not optimized fo
 -[gsl](https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBAL/climatologies/1981-2010/bio/CHELSA_gsl_1981-2010_V.2.1.tif)  
 and the U.S. Geological Survey:  
 -[GMTED2010](https://topotools.cr.usgs.gov/gmted_viewer/viewer.htm)  
-If a digital elevation model of the whole globe is needed the [GTOPO30.tif](https://github.com/LivioBaetscher/ElevDistr/inst/extdata/GTOPO30.tif) can be down loaded from my GitHub account. GTOPO30 courtesy of the U.S. Geological Survey. All the layers can be importer by using:
+If a digital elevation model of the whole globe is needed the [GTOPO30.tif](https://drive.google.com/file/d/1qgtMWPVmRCo1-zG21sUM64qgB2U1Cabr/view?usp=sharing) can be down loaded from my Google Drive. GTOPO30 courtesy of the U.S. Geological Survey. All the layers can be importer by using:
 ```{r eval = FALSE}
 temp <- raser::raster("your_raster_layer.tif")
 ```
