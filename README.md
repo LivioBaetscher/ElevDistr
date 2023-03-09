@@ -19,7 +19,7 @@ You can install the development version of ElevDistr from
 
 ``` r
 install.packages("devtools")
-devtools::install_github("LivioBaetscher/ElevDistr")
+devtools::install_github(repo = "LivioBaetscher/ElevDistr", dependencies = TRUE, build_vignettes = TRUE)
 ```
 
 ## Further information
