@@ -59,21 +59,10 @@ distance_to_treeline(lon = 8.65, lat = 46.87,  gstRaster = gst,  gslRaster = gsl
 ```
 If using only a few points, the user should plot a map and a histogram of the local treeline height. This can be achieved by changing the default parameters: `plot = TRUE` for the map and `plotHist = TRUE` for the histogram.  
 Please note that you need to register a Google API in order to be able to produce a map. A detailed explanation on how to do this can be found here: <https://www.rdocumentation.org/packages/ggmap/versions/3.0.0>. You can check with `ggmap::has_google_key()` if you have an already registered key and use the command `ggmap::ggmap_show_api_key()` to allow the wrapper downloading the map of interest.
-```{r fig.cap = "Example of a sampled area", fig.dim=c(7, 7), echo = FALSE, message = FALSE}
-ggmap::ggmap_show_api_key()
-point <- as.list(c(8.728898, 46.9375))
-temp <- generate_grid(8.728898, 46.93756, 10, 0.0025)
-temp$df <- classify_above_treeline(temp$df, gst, gsl)
-treeline <- sample_treeline(temp$df, temp$lonLength, temp$latLength, 0.0025)
-plot_distr(point, temp$df, treeline, 12)
-```
-```{r fig.cap = "Example of treelinie distribution", echo = FALSE, fig.dim=c(7, 6), message = FALSE}
-point <- as.list(c(8.728898, 46.9375))
-temp <- generate_grid(8.728898, 46.93756, 10, 0.0025)
-temp$df <- classify_above_treeline(temp$df, gst, gsl)
-treeline <- sample_treeline(temp$df, temp$lonLength, temp$latLength, 0.0025)
-x <- calculate_distance(treeline = treeline, elevationRaster = gmted2010Part, pointElevation = 512, treelineSampling = 10, plot = TRUE)
-```
+
+![Area image](../man/figures/area.png)
+![Histogram image](../man/figures/histogram.png)
+
 Furthermore, even though it is possible to change the treeline definition by changing the threshold for minimal growing season length and growing season temperature, this option should only be changed if you know what you are doing. Changed thresholds have a big impact on the computational output and are carefully chosen based on Paulsen and Körner, Alp. Bot. 124: 1-12 (2014).
 
 ## Process GBIF data
