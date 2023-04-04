@@ -5,7 +5,7 @@
 \alias{pointsAboveTreeline}
 \title{Points on or above the treeline}
 \format{
-A data frame with 1247527 rows and 2 variables:
+A data frame with 133302 rows and 2 variables:
 \describe{
 \item{longitude}{Longitude of the point (in degrees; WGS 84).}
 \item{latitude}{Latitude of the point (in degrees; WGS 84).}
@@ -20,12 +20,13 @@ gslRaster: \url{https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBA
 pointsAboveTreeline
 }
 \description{
-A data set containing 1,247,527 points on or above the treeline.
+A data set containing 133,302 points on or above the treeline.
 The data set was generated with the function \code{generate_point_df}.
 For the \code{gstRaster} (growing season temperature) and the \code{gslRaster}
 (growing season length) raster layers from CHELSA V2.1 are used (see source),
 the \code{stepSize} is set to 0.0416666 degrees.
 The thresholds and the treeline definition is based on Paulsen and Körner,
-Alp. Bot. 124: 1-12 (2014).
+Alp. Bot. 124: 1-12 (2014). The GMBA mountain inventory V1.2 was used to
+remove points that do not lie within steep terrain.
 }
 \keyword{datasets}
