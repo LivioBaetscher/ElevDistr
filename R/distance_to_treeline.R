@@ -121,6 +121,12 @@ distance_to_treeline <- function(lon, lat, gstRaster, gslRaster, elevationRaster
 
       counter <- counter + 1 #Increase the counter by one
       gridSize <- gridSize + 5 #Increase the grid size by 5km
+
+      #Safety loop if we increased the step size 5 times
+      if(counter > 6) {
+        warning(paste("The \"gridSize\" was increased 5 times, to avoid an endlose loop we stop here. Consider to exclude this point it might not be representative."))
+        break
+      }
     }
 
     #Reset the grid size
