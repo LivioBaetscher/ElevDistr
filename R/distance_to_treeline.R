@@ -3,7 +3,7 @@
 #' @description Calculate the distance to the treeline in meters. Positive values indicate that the sample is above the treeline.
 #' Negative values for samples below the treeline.
 #' @usage distance_to_treeline(lon, lat, gstRaster, gslRaster, elevationRaster, elevation,
-#'                            pointDf = utils::data("pointsAboveTreeline"), gridSize = 10,
+#'                            pointDf = pointsAboveTreeline, gridSize = 10,
 #'                            gridStepSize = 0.0025, plot = FALSE, plotZoom = NULL,
 #'                            treelineSamplingSize = 10, plotHist = FALSE, gstMin = 6.4,
 #'                            gslMin = 94)
@@ -65,7 +65,7 @@
 #'                      plotHist = FALSE, gstMin = 6.4, gslMin = 94)
 #' @export
 
-distance_to_treeline <- function(lon, lat, gstRaster, gslRaster, elevationRaster, elevation, pointDf = utils::data("pointsAboveTreeline"), gridSize = 10, gridStepSize = 0.0025,
+distance_to_treeline <- function(lon, lat, gstRaster, gslRaster, elevationRaster, elevation, pointDf = pointsAboveTreeline, gridSize = 10, gridStepSize = 0.0025,
                                           plot = FALSE, plotZoom = NULL, treelineSamplingSize = 10, plotHist = FALSE, gstMin = 6.4, gslMin = 94) {
   #Threw a warning if the "plotZoom" variable is changed, but the "plot" variable is still FALSE
   if(plot == FALSE && !is.null(plotZoom)) warning("The changed plotZoom is ignored, because the ploting is dissabled")
