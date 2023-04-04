@@ -181,6 +181,21 @@ save(newPointsAboveTreeline, file = "newPointsAboveTreeline.Rdata")
 ```
 Please note that the computation take a while, but it needs to be performed only once.
 
+Furthermore, depending on your task you might want to exclude all the areas that are that do fall outside of the mountain polygons [GMBA](https://ilias.unibe.ch/goto_ilias3_unibe_cat_1000515.html), as we did it for `pointsAboveTreeline`. Therefore, download the shape file from the link above and proceed like the following:
+
+```{r eval = FALSE}
+#Load the polygons of all the mountains (from the GMBA project)
+mountain_polygons <- terra::vect("GMBA mountain inventory V1.2(entire world)/
+                                 GMBA Mountain Inventory_v1.2-World.shp")
+
+#Keep only the points that are in a alpine polygon
+#"keep" will be a vector containing all row numbers that contain coordinate, which lie in the Alps
+keep <- terra::is.related(terra::vect(newPointsAboveTreeline, geom = c("longitude", "latitude")),
+                          mountain_polygons, "intersects") |> which() 
+
+newPointsAboveTreeline2 <- newPointsAboveTreeline [keep,] #Pick the lines of interest
+```
+
 ## How the wrapper works
 
 In case that users are interested how the algorithm works, in this paragraph is explained what happens behind the scene. For simplicity, the process is explained using the same data as in the first paragraph.  
