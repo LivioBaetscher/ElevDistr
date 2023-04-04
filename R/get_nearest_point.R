@@ -2,7 +2,7 @@
 #'
 #' @description Search for the nearest point in a data frame using a k-dimensional tree and a nearest neighbor search.
 #' The aim of this function is to get the nearest point above the treeline given the chosen \code{lon} and \code{lat}.
-#' @usage get_nearest_point(lon, lat, pointDf = pointsAboveTreeline)
+#' @usage get_nearest_point(lon, lat, pointDf)
 #' @param lon Longitude of a point (in degrees; WGS 84). One value, data type "numeric" from -180 un till 180 and finite.
 #' @param lat Latitude of a point (in degrees; WGS 84). One value, data type "numeric" from -90 un till 90 and finite.
 #' @param pointDf Data frame that contains coordinates (WGS 84) of points above the treeline.
@@ -21,7 +21,7 @@
 #' get_nearest_point(lon = 8.65, lat = 46.87, pointDf = pointsAboveTreeline)
 #' @export
 
-get_nearest_point <- function(lon, lat, pointDf = pointsAboveTreeline) {
+get_nearest_point <- function(lon, lat, pointDf) {
   #Error handling
   if (length(lon) != 1) {stop("lon must be of length 1")} else if (!is.finite(lon)) {stop("lon must be numeric and finite")} else if (lon > 180  || lon < -180) {stop("If we have to use coordinates,let's use proper coordinates... lon must be from -180 to 180")}
   if (length(lat) != 1) {stop("lat must be of length 1")} else if (!is.finite(lat)) {stop("lat must be numeric and finite")} else if (lat > 90 || lat < -90) {stop("If we have to use coordinates, let's use proper coordinates... lat must be from -90 to 90")}

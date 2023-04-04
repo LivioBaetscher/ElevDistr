@@ -4,7 +4,7 @@
 \alias{get_nearest_point}
 \title{Search the nearest point in a data frame}
 \usage{
-get_nearest_point(lon, lat, pointDf = pointsAboveTreeline)
+get_nearest_point(lon, lat, pointDf)
 }
 \arguments{
 \item{lon}{Longitude of a point (in degrees; WGS 84). One value, data type "numeric" from -180 un till 180 and finite.}

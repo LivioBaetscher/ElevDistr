@@ -5,10 +5,9 @@
 \title{Wrapper that calculates the distance relative to the nearest local treeline}
 \usage{
 distance_to_treeline(lon, lat, gstRaster, gslRaster, elevationRaster, elevation,
-                           pointDf = pointsAboveTreeline, gridSize = 10,
-                           gridStepSize = 0.0025, plot = FALSE, plotZoom = NULL,
-                           treelineSamplingSize = 10, plotHist = FALSE, gstMin = 6.4,
-                           gslMin = 94)
+                            pointDf , gridSize = 10,  gridStepSize = 0.0025, plot = FALSE,
+                            plotZoom = NULL, treelineSamplingSize = 10, plotHist = FALSE,
+                            gstMin = 6.4, gslMin = 94)
 }
 \arguments{
 \item{lon}{Longitude of a point (in degrees; WGS 84). One value or a vector, data type "numeric" and finite.}
