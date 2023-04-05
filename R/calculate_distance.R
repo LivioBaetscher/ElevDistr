@@ -67,7 +67,7 @@ calculate_distance <- function(treeline, elevationRaster, pointElevation, treeli
 
 
   #Calculate the mean elevation
-  estimatetElevation <- stats::median(sampledTreelineHeight)
+  estimatetElevation <- stats::median(sampledTreelineHeight, na.rm = TRUE)
 
   #Evaluate the plot bolean
   if (plot == TRUE) {
