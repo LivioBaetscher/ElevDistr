@@ -92,14 +92,14 @@ distance_to_treeline <- function(lon, lat, gstRaster, gslRaster, elevationRaster
   elevDistanceVec <- rep(NA, length(lon))
   startGridSize <- gridSize #Store the initial grid size
 
-  #Create the progressbar and two empty vectors
+  #Create the progress bar
   pb = utils::txtProgressBar(min = 0, max = length(lon), initial = 0, style = 3, width = 60)
-  init <- numeric(length(lon))
-  end <- numeric(length(lon))
+  #init <- numeric(length(lon))
+  #end <- numeric(length(lon))
 
   #Loop through the vectors
   for (i in 1:length(lon)){
-    init[i] <- Sys.time() #Get local time
+    #init[i] <- Sys.time() #Get local time
 
     #Calculate the nearest point above the treeline
     pointAbove <- get_nearest_point(lon[i], lat[i], pointDf)
@@ -137,24 +137,34 @@ distance_to_treeline <- function(lon, lat, gstRaster, gslRaster, elevationRaster
     #Plot a map for a visual control (if wished)
     if (plot == TRUE) {plot_distr(pointAbove, grid$df, treelineDf, plotZoom)}
 
-    #Take discrete sub samples of the line and calculate the median elevation and the distance to the initial elevation
-    elevDistance <- calculate_distance(treelineDf, elevationRaster, elevation[i], treelineSamplingSize, plotHist)
 
-    #Add current elevation relative to the treeline to the vector
-    elevDistanceVec[i] <- elevDistance
+    #Handle the case, when no treeline was detected within the area
+    if (nrow(treelineDf) == 0) {
+      #In this case the distance to the treeline could not be computed
+      elevDistanceVec[i] <- NA
+      warning("No treeline was found within the defined gridd. Therfore, the result is \"NA\". Consider retying with a larger gird size.")
+
+    #In case everything went well
+    } else {
+      #Take discrete sub samples of the line and calculate the median elevation and the distance to the initial elevation
+      elevDistance <- calculate_distance(treelineDf, elevationRaster, elevation[i], treelineSamplingSize, plotHist)
+
+      #Add current elevation relative to the treeline to the vector
+      elevDistanceVec[i] <- elevDistance
+    }
 
     #Update the progressbar with every iteration
     utils::setTxtProgressBar(pb,i)
 
-    end[i] <- Sys.time() #Get the end time
-    time <- round(sum(end - init), 0)
+    #end[i] <- Sys.time() #Get the end time
+    #time <- round(sum(end - init), 0)
 
     #Estimated remaining time based on the mean time that took to run the previous iterations
-    est <- length(lon) * (mean(end[end != 0] - init[init != 0])) - time
-    remainining <- round(est, 0)
+    #est <- length(lon) * (mean(end[end != 0] - init[init != 0])) - time
+    #remainining <- round(est, 0)
 
-    cat(paste(" // Execution time (s):", time,
-              " // Estimated time remaining (s):", remainining), "") #Plot the result
+    #cat(paste(" // Execution time (s):", time,
+    #          " // Estimated time remaining (s):", remainining), "") #Plot the result
   }
   close(pb) #Close the progress bar
 
