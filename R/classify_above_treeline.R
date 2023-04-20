@@ -56,7 +56,7 @@ classify_above_treeline <- function(coords, gstRaster, gslRaster, gstTreshold = 
   aboveTreeline <- rep(FALSE, nrow(coords))
 
   #Definition according to Paulsen and Körner 2014
-  aboveTreeline[coords$growingSeasonTemperature <= gstTreshold & coords$growingSeasonLength <= gslTreshold] <- TRUE
+  aboveTreeline[coords$growingSeasonTemperature < gstTreshold | coords$growingSeasonLength < gslTreshold] <- TRUE
   aboveTreeline[is.na(coords$growingSeasonTemperature)] <- NA
 
   coords <- cbind(coords, aboveTreeline) #Add the vector to the data frame

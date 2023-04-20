@@ -49,19 +49,24 @@ generate_point_df <- function(gstRaster, gslRaster, stepSize = 0.0416666, gstTre
   gslValues <- terra::extract(gslRaster, point)[,2]
   point <- cbind(point, "gst" = gstValues, "gsl"= gslValues)
 
-  #Create empty vectors
-  longitude <- NULL
-  latitude <- NULL
+  #Create vectors containing "NA" for the maximum number of points
+  longitude <- rep(NA, nrow(point))
+  latitude <- rep(NA, nrow(point))
 
   #Loop through the data frame
   for (i in 1:nrow(point)) {
     #Filter for points that are above the treeline
-    if (!is.na(point$gst[i]) && !is.na(point$gsl[i]) &&
-        point$gst[i] <= gstTreshold && point$gsl[i] <= gslTreshold) {
-      longitude <- c(longitude, point$longitude[i])
-      latitude <- c(latitude, point$latitude[i])
+    if ((!is.na(point$gst[i]) && !is.na(point$gsl[i])) &&
+        (point$gst[i] < gstTreshold || point$gsl[i] < gslTreshold)) {
+    #Add the elements to the filter because this is much faster
+    longitude[i] <- point$longitude[i]
+    latitude[i] <- point$latitude[i]
     }
   }
+
+  #Remove the remaining NAs
+  longitude <- longitude[!is.na(longitude)]
+  latitude <- latitude[!is.na(latitude)]
 
   #Combine vectors to a data frame
   pointsAboveTreeline <- data.frame(cbind(longitude, latitude))

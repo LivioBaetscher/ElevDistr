@@ -5,7 +5,7 @@
 \alias{pointsAboveTreeline}
 \title{Points on or above the treeline}
 \format{
-A data frame with 133302 rows and 2 variables:
+A data frame with 511'930 rows and 2 variables:
 \describe{
 \item{longitude}{Longitude of the point (in degrees; WGS 84).}
 \item{latitude}{Latitude of the point (in degrees; WGS 84).}

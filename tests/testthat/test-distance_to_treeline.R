@@ -11,7 +11,7 @@ test_that("output is correct", {
   expect_equal(distance_to_treeline(lon = 8.65, lat = 46.87, pointDf = pointsAboveTreeline, gstRaster = gst,
                                     gslRaster = gsl, elevationRaster = gmted2010Part, elevation = 504, gridSize = 10,
                                     gridStepSize = 0.0025, plot = FALSE, plotZoom = NULL, treelineSamplingSize = 10,
-                                    plotHist = FALSE, gstMin = 6.4, gslMin = 94), -1553)
+                                    plotHist = FALSE, gstMin = 6.4, gslMin = 94), -1491)
   expect_type(distance_to_treeline(lon = 8.65, lat = 46.87, pointDf = pointsAboveTreeline, gstRaster = gst,
                                     gslRaster = gsl, elevationRaster = gmted2010Part, elevation = 504, gridSize = 10,
                                     gridStepSize = 0.0025, plot = FALSE, plotZoom = NULL, treelineSamplingSize = 10,

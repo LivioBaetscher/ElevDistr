@@ -12,7 +12,7 @@ temp$df <- classify_above_treeline(temp$df, gst, gsl)
 treeline <- sample_treeline(temp$df, temp$lonLength, temp$latLength, 0.0025)
 
 test_that("output is correct", {
-  expect_equal(calculate_distance(treeline, gmted2010Part, 504, 10, FALSE), -1553)
+  expect_equal(calculate_distance(treeline, gmted2010Part, 504, 10, FALSE), -1491)
   expect_type(calculate_distance(treeline, gmted2010Part, 504, 10, FALSE), "double")
   expect_length(calculate_distance(treeline, gmted2010Part, 504, 10, FALSE), 1)
 })

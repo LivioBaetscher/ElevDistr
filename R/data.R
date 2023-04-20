@@ -8,7 +8,7 @@
 #' The thresholds and the treeline definition is based on Paulsen and Körner,
 #' Alp. Bot. 124: 1-12 (2014). The GMBA mountain inventory V1.2 was used to
 #' remove points that do not lie within steep terrain.
-#' @format A data frame with 133302 rows and 2 variables:
+#' @format A data frame with 511'930 rows and 2 variables:
 #' \describe{
 #'   \item{longitude}{Longitude of the point (in degrees; WGS 84).}
 #'   \item{latitude}{Latitude of the point (in degrees; WGS 84).}
