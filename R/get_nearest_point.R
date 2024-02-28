@@ -3,8 +3,8 @@
 #' @description Search for the nearest point in a data frame using a k-dimensional tree and a nearest neighbor search.
 #' The aim of this function is to get the nearest point above the treeline given the chosen \code{lon} and \code{lat}.
 #' @usage get_nearest_point(lon, lat, pointDf)
-#' @param lon Longitude of a point (in degrees; WGS 84). One value, data type "numeric" from -180 un till 180 and finite.
-#' @param lat Latitude of a point (in degrees; WGS 84). One value, data type "numeric" from -90 un till 90 and finite.
+#' @param lon Longitude of a point (in degrees; WGS 84). One value, data type "numeric" from -180 until 180 and finite.
+#' @param lat Latitude of a point (in degrees; WGS 84). One value, data type "numeric" from -90 until 90 and finite.
 #' @param pointDf Data frame that contains coordinates (WGS 84) of points above the treeline.
 #' The first column must contain the longitude, the second the latitude.
 #' The values must be of the data type "numeric" and finite.

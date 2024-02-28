@@ -7,9 +7,9 @@
 get_nearest_point(lon, lat, pointDf)
 }
 \arguments{
-\item{lon}{Longitude of a point (in degrees; WGS 84). One value, data type "numeric" from -180 un till 180 and finite.}
+\item{lon}{Longitude of a point (in degrees; WGS 84). One value, data type "numeric" from -180 until 180 and finite.}
 
-\item{lat}{Latitude of a point (in degrees; WGS 84). One value, data type "numeric" from -90 un till 90 and finite.}
+\item{lat}{Latitude of a point (in degrees; WGS 84). One value, data type "numeric" from -90 until 90 and finite.}
 
 \item{pointDf}{Data frame that contains coordinates (WGS 84) of points above the treeline.
 The first column must contain the longitude, the second the latitude.
