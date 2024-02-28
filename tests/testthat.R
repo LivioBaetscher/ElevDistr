@@ -7,7 +7,6 @@
 # * https://testthat.r-lib.org/reference/test_package.html#special-files
 
 library(testthat)
-library(rgdal)
 library(ElevDistr)
 
 test_check("ElevDistr")
