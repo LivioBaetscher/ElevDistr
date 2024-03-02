@@ -42,12 +42,12 @@
 #'                  "GLOBAL/climatologies/1981-2010/bio/CHELSA_gst_1981-2010_V.2.1.tif")
 #' gslURL <- paste0("https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/",
 #'                  "GLOBAL/climatologies/1981-2010/bio/CHELSA_gsl_1981-2010_V.2.1.tif")
-#' gst <- terra::rast(gstURL)
-#' gsl <- terra::rast(gslURL)
+#' gst <- terra::rast(gstURL, vsi = TRUE)
+#' gsl <- terra::rast(gslURL, vsi = TRUE)
 #'
 #' gmted2010URL <- paste0("https://edcintl.cr.usgs.gov/downloads/sciweb1/shared/topo/downloads/GMTED/",
 #'                       "Global_tiles_GMTED/300darcsec/med/E000/30N000E_20101117_gmted_med300.tif")
-#' gmted2010Part <- terra::rast(gmted2010URL)
+#' gmted2010Part <- terra::rast(gmted2010URL, vsi = TRUE)
 #'
 #' #Check a few points
 #' distance_to_treeline(lon = 8.65, lat = 46.87, gstRaster = gst, gslRaster = gsl,

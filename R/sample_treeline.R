@@ -28,8 +28,8 @@
 #'                  "GLOBAL/climatologies/1981-2010/bio/CHELSA_gst_1981-2010_V.2.1.tif")
 #' gslURL <- paste0("https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/",
 #'                  "GLOBAL/climatologies/1981-2010/bio/CHELSA_gsl_1981-2010_V.2.1.tif")
-#' gst <- terra::rast(gstURL)
-#' gsl <- terra::rast(gslURL)
+#' gst <- terra::rast(gstURL, vsi = TRUE)
+#' gsl <- terra::rast(gslURL, vsi = TRUE)
 #'
 #' temp$df <- classify_above_treeline(coords = temp$df, gstRaster = gst, gslRaster = gsl)
 #'

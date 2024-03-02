@@ -1,7 +1,7 @@
 gstURL <- "https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBAL/climatologies/1981-2010/bio/CHELSA_gst_1981-2010_V.2.1.tif"
 gslURL <- "https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBAL/climatologies/1981-2010/bio/CHELSA_gsl_1981-2010_V.2.1.tif"
-gst <- terra::rast(gstURL)
-gsl <- terra::rast(gslURL)
+gst <- terra::rast(gstURL, vsi = TRUE)
+gsl <- terra::rast(gslURL, vsi = TRUE)
 point <- data.frame("lon" = 8.65, "lat" = 46.87)
 
 test_that("output type is correct", {

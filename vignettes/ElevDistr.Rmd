@@ -40,15 +40,15 @@ gstURL <- paste0("https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/",
 gslURL <- paste0("https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/",
                  "GLOBAL/climatologies/1981-2010/bio/CHELSA_gsl_1981-2010_V.2.1.tif")
 
-gst <- terra::rast(gstURL)
-gsl <- terra::rast(gslURL)
+gst <- terra::rast(gstURL, vsi = TRUE)
+gsl <- terra::rast(gslURL, vsi = TRUE)
 ```
 Furthermore, a digital elevation model (DEM) needs to be imported. Therefore, I choose a part of the [GMTED2010](https://www.usgs.gov/coastal-changes-and-impacts/gmted2010) courtesy of the U.S. Geological Survey. This works very similar as shown above.
 ```{r}
 gmted2010URL <- paste0("https://edcintl.cr.usgs.gov/downloads/sciweb1/shared/topo/downloads/GMTED/",
                       "Global_tiles_GMTED/300darcsec/med/E000/30N000E_20101117_gmted_med300.tif")
 
-gmted2010Part <- terra::rast(gmted2010URL)
+gmted2010Part <- terra::rast(gmted2010URL, vsi = TRUE)
 ```
 The only thing that needs to be done now is to call the wrapper and specify a longitude, latitude and an elevation of the point of interest.  
 Note: All coordinates need to be in World Geodetic System 1984 (WGS 84).
@@ -130,14 +130,14 @@ gstURL <- paste0("https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/",
 gslURL <- paste0("https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/",
                  "GLOBAL/climatologies/1981-2010/bio/CHELSA_gsl_1981-2010_V.2.1.tif")
 
-gst <- terra::rast(gstURL)
-gsl <- terra::rast(gslURL)
+gst <- terra::rast(gstURL, vsi = TRUE)
+gsl <- terra::rast(gslURL, vsi = TRUE)
 
 #Import the DEM
 gmted2010URL <- paste0("https://edcintl.cr.usgs.gov/downloads/sciweb1/shared/topo/downloads/GMTED/",
                       "Global_tiles_GMTED/300darcsec/med/E000/30N000E_20101117_gmted_med300.tif")
 
-gmted2010Part <- terra::rast(gmted2010URL)
+gmted2010Part <- terra::rast(gmted2010URL, vsi = TRUE)
 
 #Run classification for the first five elements
 elev <- distance_to_treeline(lon = ranunculusSampled$decimalLongitude[1:5], 
