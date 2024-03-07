@@ -75,11 +75,14 @@ gmted2010URL <- paste0("https://edcintl.cr.usgs.gov/downloads/sciweb1/shared/top
                       "Global_tiles_GMTED/300darcsec/med/E000/30N000E_20101117_gmted_med300.tif")
 gmted2010Part <- terra::rast(gmted2010URL, vsi = TRUE)
 
-#Check a few points
+#Check one point
 distance_to_treeline(lon = 8.65, lat = 46.87, gstRaster = gst, gslRaster = gsl,
                      elevationRaster = gmted2010Part, elevation = 504,
                      pointDf = pointsAboveTreeline, plot = FALSE,
                      plotHist = FALSE, gstMin = 6.4, gslMin = 94)
+
+#Additional examples that are not executed because they take too long to run
+\dontrun{
 distance_to_treeline(lon = 4.47, lat = 51.92, gstRaster = gst, gslRaster = gsl,
                      elevationRaster = gmted2010Part, elevation = 504,
                      pointDf = pointsAboveTreeline, plot = FALSE,
@@ -88,6 +91,7 @@ distance_to_treeline(lon = -156.71, lat = 69.74,gstRaster = gst, gslRaster = gsl
                      elevationRaster = gmted2010Part, elevation = 504,
                      pointDf = pointsAboveTreeline, plot = FALSE,
                      plotHist = FALSE, gstMin = 6.4, gslMin = 94)
+}
 }
 \author{
 Livio Bätscher, Jurriaan M. de Vos

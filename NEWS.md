@@ -1,7 +1,17 @@
-## version 1.0.6
+## version 1.0.7
 
 ---
 
+### Minor improvements
+
+- Add DOI to a reference in the description file.
+- Replaced CRANE package links with a canonical form.
+- Corrected a typo.
+- Shortened three excamples.
+
+## version 1.0.6
+
+---
 
 ### Bug fixes
 
@@ -16,16 +26,13 @@ gst <- terra::rast(gstURL)
 gst <- terra::rast(gstURL, vsi = TRUE)
 ```
 
-
-
 ## version 1.0.5
 
 ---
 
-
 ### Prepare CRANE upload
 
-- Removed old rgdal dependencies
+- Removed old rgdal dependencies.
 
 
 ## version 0.0.0.9000
@@ -34,5 +41,5 @@ gst <- terra::rast(gstURL, vsi = TRUE)
 
 ### NEWS.md setup
 
-- Added NEWS.md creation with [newsmd](https://github.com/Dschaykib/newsmd)
+- Added NEWS.md creation with [newsmd](https://github.com/Dschaykib/newsmd).
 

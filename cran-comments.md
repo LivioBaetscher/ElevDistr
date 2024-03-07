@@ -1,13 +1,11 @@
-For a CRAN submission we recommend that you fix all NOTEs, WARNINGs and ERRORs.
-## Test environments
-- R-hub windows-x86_64-devel (r-devel)
-- R-hub ubuntu-gcc-release (r-release)
-- R-hub fedora-clang-devel (r-devel)
+── ElevDistr 1.0.7: NOTE
 
-## R CMD check results
-❯ On windows-x86_64-devel (r-devel)
-  checking CRAN incoming feasibility ... [22s] NOTE
-  Maintainer: 'Livio Bätscher <livio_999@hotmail.com>'
+  Build ID:   ElevDistr_1.0.7.tar.gz-1555ff0aa0bb4aaeaf4fa57702cc2177
+  Platform:   Windows Server 2022, R-devel, 64 bit
+  Submitted:  2h 38m 1.2s ago
+  Build time: 6m 33.6s
+
+❯ checking CRAN incoming feasibility ... [23s] NOTE
   
   New submission
   
@@ -15,54 +13,32 @@ For a CRAN submission we recommend that you fix all NOTEs, WARNINGs and ERRORs.
     Paulsen (13:14)
     WGS (11:41)
     rner (13:29)
-  
-  Found the following (possibly) invalid URLs:
-    URL: https://cran.r-project.org/web/packages/CoordinateCleaner/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    URL: https://cran.r-project.org/web/packages/RANN/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    URL: https://cran.r-project.org/web/packages/devtools/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    URL: https://cran.r-project.org/web/packages/rgbif/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    URL: https://cran.r-project.org/web/packages/tidyverse/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
+  Maintainer: 'Livio Bätscher <livio_999@hotmail.com>'
 
-❯ On windows-x86_64-devel (r-devel)
-  checking examples ... [50s] NOTE
+❯ checking examples ... [27s] NOTE
   Examples with CPU (user + system) or elapsed time > 5s
                           user system elapsed
-  distance_to_treeline    6.35   0.28   26.83
-  classify_above_treeline 3.92   0.10   11.97
-  generate_point_df       0.09   0.00    8.97
+  classify_above_treeline 3.87   0.11   12.26
+  generate_point_df       0.08   0.01    8.81
 
-❯ On windows-x86_64-devel (r-devel)
-  checking for non-standard things in the check directory ... NOTE
+❯ checking for non-standard things in the check directory ... NOTE
   Found the following files/directories:
     ''NULL''
 
-❯ On windows-x86_64-devel (r-devel)
-  checking for detritus in the temp directory ... NOTE
+❯ checking for detritus in the temp directory ... NOTE
   Found the following files/directories:
     'lastMiKTeXException'
 
-❯ On ubuntu-gcc-release (r-release)
-  checking CRAN incoming feasibility ... [7s/46s] NOTE
+0 errors ✔ | 0 warnings ✔ | 4 notes ✖
+
+── ElevDistr 1.0.7: NOTE
+
+  Build ID:   ElevDistr_1.0.7.tar.gz-c256c60656df4e7ba7f990ac38964deb
+  Platform:   Ubuntu Linux 20.04.1 LTS, R-release, GCC
+  Submitted:  2h 38m 1.3s ago
+  Build time: 2h 27m 47.7s
+
+❯ checking CRAN incoming feasibility ... [6s/41s] NOTE
   Maintainer: ‘Livio Bätscher <livio_999@hotmail.com>’
   
   New submission
@@ -71,49 +47,26 @@ For a CRAN submission we recommend that you fix all NOTEs, WARNINGs and ERRORs.
     Körner (13:26)
     Paulsen (13:14)
     WGS (11:41)
-  
-  Found the following (possibly) invalid URLs:
-    URL: https://cran.r-project.org/web/packages/CoordinateCleaner/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    URL: https://cran.r-project.org/web/packages/devtools/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    URL: https://cran.r-project.org/web/packages/RANN/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    URL: https://cran.r-project.org/web/packages/rgbif/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    URL: https://cran.r-project.org/web/packages/tidyverse/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    The canonical URL of the CRAN page for a package is 
-      https://CRAN.R-project.org/package=pkgname
 
-❯ On ubuntu-gcc-release (r-release)
-  checking examples ... [14s/88s] NOTE
+❯ checking examples ... [9s/38s] NOTE
   Examples with CPU (user + system) or elapsed time > 5s
                            user system elapsed
-  classify_above_treeline 6.304  0.099  31.874
-  distance_to_treeline    5.898  0.155  44.225
+  classify_above_treeline 5.945  0.141  20.796
+  distance_to_treeline    0.674  0.063   7.858
 
-❯ On ubuntu-gcc-release (r-release), fedora-clang-devel (r-devel)
-  checking HTML version of manual ... NOTE
+❯ checking HTML version of manual ... NOTE
   Skipping checking HTML validation: no command 'tidy' found
 
-❯ On fedora-clang-devel (r-devel)
-  checking CRAN incoming feasibility ... [8s/106s] NOTE
+0 errors ✔ | 0 warnings ✔ | 3 notes ✖
+
+── ElevDistr 1.0.7: NOTE
+
+  Build ID:   ElevDistr_1.0.7.tar.gz-f9febccf5b074e9aa1b34f4d7033efe0
+  Platform:   Fedora Linux, R-devel, clang, gfortran
+  Submitted:  2h 38m 1.5s ago
+  Build time: 2h 8m 16.8s
+
+❯ checking CRAN incoming feasibility ... [7s/43s] NOTE
   Maintainer: ‘Livio Bätscher <livio_999@hotmail.com>’
   
   New submission
@@ -122,42 +75,15 @@ For a CRAN submission we recommend that you fix all NOTEs, WARNINGs and ERRORs.
     Körner (13:26)
     Paulsen (13:14)
     WGS (11:41)
-  
-  Found the following (possibly) invalid URLs:
-    URL: https://cran.r-project.org/web/packages/CoordinateCleaner/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    URL: https://cran.r-project.org/web/packages/RANN/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    URL: https://cran.r-project.org/web/packages/devtools/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    URL: https://cran.r-project.org/web/packages/rgbif/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    URL: https://cran.r-project.org/web/packages/tidyverse/index.html
-      From: inst/doc/ElevDistr.html
-      Status: 200
-      Message: OK
-      CRAN URL not in canonical form
-    The canonical URL of the CRAN page for a package is 
-      https://CRAN.R-project.org/package=pkgname
 
-❯ On fedora-clang-devel (r-devel)
-  checking examples ... [15s/88s] NOTE
+❯ checking examples ... [9s/44s] NOTE
   Examples with CPU (user + system) or elapsed time > 5s
                            user system elapsed
-  classify_above_treeline 6.422  0.073  31.272
-  distance_to_treeline    6.043  0.196  43.525
-  generate_point_df       0.071  0.000   6.430
+  classify_above_treeline 6.253  0.055  23.156
+  distance_to_treeline    0.696  0.115   8.578
+  generate_point_df       0.069  0.004   6.998
 
-0 errors ✔ | 0 warnings ✔ | 9 notes ✖
+❯ checking HTML version of manual ... NOTE
+  Skipping checking HTML validation: no command 'tidy' found
+
+0 errors ✔ | 0 warnings ✔ | 3 notes ✖
