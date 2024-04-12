@@ -1,5 +1,10 @@
 # ElevDistr
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/LivioBaetscher/ElevDistr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/LivioBaetscher/ElevDistr/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
+
 ElevDistr is a method to calculate the distance to the climatic tree
 line for large data sets of coordinates (WGS 84) with geographical
 uncertainty. The default thresholds and the treeline definition is based
