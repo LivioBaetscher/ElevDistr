@@ -17,8 +17,7 @@
 #' from 3 to 21.
 #' @return Nothing.
 #' @author Livio Bätscher, Jurriaan M. de Vos
-#' @examples
-#' \dontrun{
+#' @examples \donttest{
 #' plot_distr(nearestCorner = pointsAboveTreeLine, grid = dfGrid, treelineDf = dfTreeline,
 #'            size = 12)
 #' }
