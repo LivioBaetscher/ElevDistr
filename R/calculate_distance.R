@@ -14,7 +14,7 @@
 #' The plot will only be shown if the value is \code{TRUE}.
 #' @return Returns a numeric representing the vertical distance to the local treeline in meters.
 #' @author Livio Bätscher, Jurriaan M. de Vos
-#' @examples \donttest{
+#' @examples \dontrun{
 #' calculate_distance(treeline = dfTreeline, elevationRaster = GTOPO30, pointElevation = 512,
 #'                    treelineSampling = 10, plot = FALSE)
 #' }
