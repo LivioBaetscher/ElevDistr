@@ -1,10 +1,12 @@
-Thank you very much for the valuable review of my package.
+## Resubmission
+
+This is a resubmission. Thank you very much for the valuable review of my package.
 
 I changed the citation in the DESCRIPTION file.
 I remove the abbreviation in the DESCRIPTION file.
 
 I replace \dontrun() with \donttest() whenever possible. Now it is only used if the API keys are missing.
-I added \donttest if data is downloaded.
+I added \donttest() if data is downloaded.
 
 I hope this addresses all issues.
 
