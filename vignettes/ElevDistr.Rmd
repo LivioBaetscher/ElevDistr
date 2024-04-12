@@ -230,4 +230,4 @@ In the final step, the treeline is sampled with a step size defined in the input
 calculate_distance(treeline = treelineDf, elevationRaster = gmted2010Part, pointElevation = 504,
                    treelineSampling = 10, plot = FALSE)
 ```
-All the functions called by the wrapper can, if disired, be called independently. In my opinion this does not make a lot of sense for the last two functions, but I leave this decisions to the users.
+All the functions called by the wrapper can, if desired, be called independently. In my opinion this does not make a lot of sense for the last two functions, but I leave this decisions to the users.
