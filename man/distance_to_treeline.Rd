@@ -68,6 +68,7 @@ gstURL <- paste0("https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/",
                  "GLOBAL/climatologies/1981-2010/bio/CHELSA_gst_1981-2010_V.2.1.tif")
 gslURL <- paste0("https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/",
                  "GLOBAL/climatologies/1981-2010/bio/CHELSA_gsl_1981-2010_V.2.1.tif")
+\donttest{
 gst <- terra::rast(gstURL, vsi = TRUE)
 gsl <- terra::rast(gslURL, vsi = TRUE)
 
@@ -80,9 +81,6 @@ distance_to_treeline(lon = 8.65, lat = 46.87, gstRaster = gst, gslRaster = gsl,
                      elevationRaster = gmted2010Part, elevation = 504,
                      pointDf = pointsAboveTreeline, plot = FALSE,
                      plotHist = FALSE, gstMin = 6.4, gslMin = 94)
-
-#Additional examples that are not executed because they take too long to run
-\dontrun{
 distance_to_treeline(lon = 4.47, lat = 51.92, gstRaster = gst, gslRaster = gsl,
                      elevationRaster = gmted2010Part, elevation = 504,
                      pointDf = pointsAboveTreeline, plot = FALSE,

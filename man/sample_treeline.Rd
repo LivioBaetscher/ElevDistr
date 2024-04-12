@@ -41,6 +41,7 @@ gstURL <- paste0("https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/",
                  "GLOBAL/climatologies/1981-2010/bio/CHELSA_gst_1981-2010_V.2.1.tif")
 gslURL <- paste0("https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/",
                  "GLOBAL/climatologies/1981-2010/bio/CHELSA_gsl_1981-2010_V.2.1.tif")
+\donttest{
 gst <- terra::rast(gstURL, vsi = TRUE)
 gsl <- terra::rast(gslURL, vsi = TRUE)
 
@@ -48,6 +49,7 @@ temp$df <- classify_above_treeline(coords = temp$df, gstRaster = gst, gslRaster 
 
 treeline <- sample_treeline(df = temp$df, lonLength = temp$lonLength,
                             latLength = temp$latLength, stepSize = 0.0025)
+}
 }
 \author{
 Livio Bätscher, Jurriaan M. de Vos

@@ -18,12 +18,14 @@
 #'                  "GLOBAL/climatologies/1981-2010/bio/CHELSA_gst_1981-2010_V.2.1.tif")
 #' gslURL <- paste0("https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/",
 #'                  "GLOBAL/climatologies/1981-2010/bio/CHELSA_gsl_1981-2010_V.2.1.tif")
+#' \donttest{
 #' gst <- terra::rast(gstURL, vsi = TRUE)
 #' gsl <- terra::rast(gslURL, vsi = TRUE)
 #'
 #' #Now generate a example data frame
 #' temp <- generate_point_df(gstRaster = gst, gslRaster = gsl, stepSize = 10,
 #'                          gstTreshold = 6.4, gslTreshold = 94)
+#' }
 #' @export
 
 generate_point_df <- function(gstRaster, gslRaster, stepSize = 0.0416666, gstTreshold = 6.4, gslTreshold = 94) {

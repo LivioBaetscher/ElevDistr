@@ -1,10 +1,30 @@
+## version 1.0.8
+
+---
+
+### Description file improvement
+
+- Corrected a reference and added DOI.
+- Replaced the "WGS 84" abbreviation with "World Geodetic System 1984".
+
+### Excamples
+
+- Replaced 'dontrun{}' with 'donttest{}', where necessary.
+- Added 'donttest{}' if data is downloaded or the execution time is to long.
+- Removed unnecessary comments like: "Additional examples that are not executed because they take too long to run".
+
+### README
+
+- Updated the instalation guideline in the "README.md"."
+
+
 ## version 1.0.7
 
 ---
 
 ### Minor improvements
 
-- Add DOI to a reference in the description file.
+- Added DOI to a reference in the vignettes file.
 - Replaced CRANE package links with a canonical form.
 - Corrected a typo.
 - Shortened three excamples.

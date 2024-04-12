@@ -1,6 +1,6 @@
 Package: ElevDistr
 Title: Calculate the Distance to the Nearest Local Treeline
-Version: 1.0.7
+Version: 1.0.8
 Authors@R: c(
     person("Livio", "Bätscher", , "livio_999@hotmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-2989-930X")),
@@ -8,10 +8,10 @@ Authors@R: c(
            comment = c(ORCID = "0000-0001-6428-7774"))
   )
 Description: A method to calculate the distance to the climatic tree line
-    for large data sets of coordinates (WGS 84) with geographical
-    uncertainty.  The default thresholds and the treeline definition is
-    based on Paulsen and Körner, Alp. Bot. 124: 1-12 (2014), users are
-    free to decide what climate layers they would like to use.
+    for large data sets of coordinates (World Geodetic System 1984) with 
+    geographical uncertainty. The default thresholds and the treeline definition
+    is based on Paulsen and Körner (2014) <doi:10.1007/s00035-014-0124-0>, users
+    are free to decide what climate layers they would like to use.
 License: MIT + file LICENSE
 URL: https://github.com/LivioBaetscher/ElevDistr
 BugReports: https://github.com/LivioBaetscher/ElevDistr/issues

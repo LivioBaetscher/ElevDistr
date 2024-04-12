@@ -1,11 +1,9 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # ElevDistr
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/LivioBaetscher/ElevDistr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/LivioBaetscher/ElevDistr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
+
 
 ElevDistr is a method to calculate the distance to the climatic tree
 line for large data sets of coordinates (WGS 84) with geographical
@@ -15,12 +13,18 @@ decide what climate layers they would like to use.
 
 ## Installation
 
-You can install the development version of ElevDistr from
-[GitHub](https://github.com/) with:
+The package ElevDistr can be installed via CRAN or from GitHub using the package [devtools](https://CRAN.R-project.org/package=devtools).  
 
+Stable version from CRAN:
 ``` r
-install.packages("devtools")
-devtools::install_github(repo = "LivioBaetscher/ElevDistr", dependencies = TRUE, build_vignettes = TRUE)
+install.packages("ElevDistr")
+library("ElevDistr")
+```
+Developmental from GitHub:
+``` r
+install.packages("devtools", repos = "http://cran.us.r-project.org")
+devtools::install_github("LivioBaetscher/ElevDistr")
+library("ElevDistr")
 ```
 
 ## Further information
