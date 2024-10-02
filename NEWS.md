@@ -9,6 +9,7 @@
 ### README
 
 - Slight textual modifications were made and the section "How to cite this work" was added.
+- Added an R-CDM-check badge.
 
 ### tests
 
@@ -28,7 +29,6 @@ URLs within the automated tests with the latest fixed this problem.
 the 'plot_distr' function.
 - The expired CHELSA URLs were replaced in the examples (all labeled with 'donttest{}').
 - Corrected formatting issues and typos in the NEWS.md file.
-- Fixed the the R-hub v2 workflow.
 
 ## version 1.0.8
 
