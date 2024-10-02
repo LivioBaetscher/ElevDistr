@@ -2,7 +2,10 @@
 
 ElevDistr is a method to calculate the distance to the climatic tree
 line for large data sets of coordinates (WGS 84) with geographical
-uncertainty. The default thresholds and the treeline definition is based
+uncertainty. This R package was developed in the context of the article
+"[Avoiding impacts of phylogenetic tip-state-errors on dispersal and extirpation rates in alpine plant biogeography](https://doi.org/10.1111/jbi.14811)".
+For citing this package see [below](#how-to-cite-this-work).
+The default thresholds and the treeline definition is based
 on Paulsen and Körner, Alp. Bot. 124: 1-12 (2014), users are free to
 decide what climate layers they would like to use.
 
@@ -20,6 +23,13 @@ Developmental from GitHub:
 install.packages("devtools", repos = "http://cran.us.r-project.org")
 devtools::install_github("LivioBaetscher/ElevDistr")
 library("ElevDistr")
+```
+
+## How to cite this work
+
+Please cite: Bätscher and de Vos, J. Biogeogr. (2024), or see:
+``` r
+citation("ElevDistr")
 ```
 
 ## Further information
