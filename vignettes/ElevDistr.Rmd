@@ -73,7 +73,7 @@ Please note that you need to register a Google API in order to produce a map. A 
 
 ![Example of a sampled area](../man/figures/area.jpeg)
 ```{r eval=FALSE, fig.cap="Example of a sampled area", fig.dim=c(7, 7), message=FALSE, include=FALSE}
-ggmap::ggmap_show_api_key()
+#ggmap::ggmap_show_api_key()
 point <- as.list(c(8.728898, 46.9375))
 temp <- generate_grid(8.728898, 46.93756, 10, 0.0025)
 temp$df <- classify_above_treeline(temp$df, gst, gsl)
