@@ -71,7 +71,8 @@ distance_to_treeline(lon = 8.65, lat = 46.87,  gstRaster = gst,  gslRaster = gsl
 If using only a few points, the user should plot a map and a histogram of the local treeline height. This can be achieved by changing the default parameters: `plot = TRUE` for the map and `plotHist = TRUE` for the histogram.\
 Please note that you need to register a Google API in order to produce a map. A detailed explanation can be found here: [Register a Google API](https://search.r-project.org/CRAN/refmans/ggmap/html/register_google.html). You can check if you have an already registered key with `ggmap::has_google_key()`, and use the command `ggmap::ggmap_show_api_key()` to allow the wrapper to download the map of interest.
 
-```{r fig.cap = "Example of a sampled area", fig.dim=c(7, 7), echo = FALSE, message = FALSE}
+![Example of a sampled area](../man/figures/area.jpeg)
+```{r eval=FALSE, fig.cap="Example of a sampled area", fig.dim=c(7, 7), message=FALSE, include=FALSE}
 ggmap::ggmap_show_api_key()
 point <- as.list(c(8.728898, 46.9375))
 temp <- generate_grid(8.728898, 46.93756, 10, 0.0025)
@@ -79,8 +80,8 @@ temp$df <- classify_above_treeline(temp$df, gst, gsl)
 treeline <- sample_treeline(temp$df, temp$lonLength, temp$latLength, 0.0025)
 plot_distr(point, temp$df, treeline, 12)
 ```
-
-```{r fig.cap = "Example of treelinie distribution", echo = FALSE, fig.dim=c(7, 6), message = FALSE}
+![Example of treelinie distribution](../man/figures/histogram.jpeg)
+```{r eval=FALSE, fig.cap="Example of treelinie distribution", fig.dim=c(7, 6), message=FALSE, include=FALSE}
 point <- as.list(c(8.728898, 46.9375))
 temp <- generate_grid(8.728898, 46.93756, 10, 0.0025)
 temp$df <- classify_above_treeline(temp$df, gst, gsl)
