@@ -10,7 +10,7 @@
 
 - Slight textual modifications were made and the section "How to cite this work" was added.
 - Set up an README.Rmd which is new rendered into the README.md file.
-- Added an R-CMD-check and a CRAN badge.
+- Added an R-CMD-check, a CRAN and an codecov badge.
 
 ### tests
 
