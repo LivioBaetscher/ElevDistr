@@ -80,7 +80,7 @@ temp$df <- classify_above_treeline(temp$df, gst, gsl)
 treeline <- sample_treeline(temp$df, temp$lonLength, temp$latLength, 0.0025)
 plot_distr(point, temp$df, treeline, 12)
 ```
-![Example of treelinie distribution](../man/figures/histogram.jpeg)
+![Example of treeline distribution](../man/figures/histogram.jpeg)
 ```{r eval=FALSE, fig.cap="Example of treelinie distribution", fig.dim=c(7, 6), message=FALSE, include=FALSE}
 point <- as.list(c(8.728898, 46.9375))
 temp <- generate_grid(8.728898, 46.93756, 10, 0.0025)
