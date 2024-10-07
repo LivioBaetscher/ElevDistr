@@ -9,7 +9,8 @@
 ### README
 
 - Slight textual modifications were made and the section "How to cite this work" was added.
-- Added an R-CDM-check badge.
+- Set up an README.Rmd which is new rendered into the README.md file.
+- Added an R-CMD-check and a CRAN badge.
 
 ### tests
 
@@ -48,7 +49,7 @@ too long to run".
 
 ### README
 
-- Updated the installation guideline in the "README.md".
+- Updated the installation guideline in the README.md.
 
 ### Minor corrections
 
@@ -72,8 +73,8 @@ too long to run".
 ### Bug fixes
 
 - I fixed three errors that only appeared under Linux systems: the examples testing, the tests,
-and the ‘ElevDistr.Rmd’ built failed. All three errors were caused by a GDAL error, changing the
-option from ‘terra::rast’ solved the problem. This option pastes “/vsicurl/” before the URL and
+and the ElevDistr.md built failed. All three errors were caused by a GDAL error, changing the
+option from 'terra::rast' solved the problem. This option pastes “/vsicurl/” before the URL and
 properly enables the GDAL virtual file system.
 
 

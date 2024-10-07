@@ -1,28 +1,42 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # ElevDistr
 
 <!-- badges: start -->
-  [![R-CMD-check](https://github.com/LivioBaetscher/ElevDistr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/LivioBaetscher/ElevDistr/actions/workflows/R-CMD-check.yaml)
+
+[![R-CMD-check](https://github.com/LivioBaetscher/ElevDistr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/LivioBaetscher/ElevDistr/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/ElevDistr)](https://CRAN.R-project.org/package=ElevDistr)
+[![Codecov test
+coverage](https://codecov.io/gh/LivioBaetscher/ElevDistr/graph/badge.svg)](https://app.codecov.io/gh/LivioBaetscher/ElevDistr)
 <!-- badges: end -->
 
 ElevDistr is a method to calculate the distance to the climatic tree
 line for large data sets of coordinates (WGS 84) with geographical
 uncertainty. This R package was developed in the context of the article
-"[Avoiding impacts of phylogenetic tip-state-errors on dispersal and extirpation rates in alpine plant biogeography](https://doi.org/10.1111/jbi.14811)".
-For citing this package see [below](#how-to-cite-this-work).
-The default thresholds and the treeline definition is based
-on Paulsen and Körner, Alp. Bot. 124: 1-12 (2014), users are free to
-decide what climate layers they would like to use.
+“[Avoiding impacts of phylogenetic tip-state-errors on dispersal and
+extirpation rates in alpine plant
+biogeography](https://doi.org/10.1111/jbi.14811)”. For citing this
+package see [below](#how-to-cite-this-work). The default thresholds and
+the treeline definition is based on Paulsen and Körner, *Alp. Bot.* 124:
+1-12 (2014), users are free to decide what climate layers they would
+like to use.
 
 ## Installation
 
-The package ElevDistr can be installed via CRAN or from GitHub using the package [devtools](https://CRAN.R-project.org/package=devtools).  
+The package ElevDistr can be installed via CRAN or from GitHub using the
+package [devtools](https://CRAN.R-project.org/package=devtools).
 
 Stable version from CRAN:
+
 ``` r
 install.packages("ElevDistr")
 library("ElevDistr")
 ```
+
 Developmental from GitHub:
+
 ``` r
 install.packages("devtools", repos = "http://cran.us.r-project.org")
 devtools::install_github("LivioBaetscher/ElevDistr")
@@ -31,11 +45,14 @@ library("ElevDistr")
 
 ## How to cite this work
 
-Please cite: Bätscher and de Vos, J. Biogeogr. (2024), or see:
+Please cite: Bätscher and de Vos, *J. Biogeogr.* (2024), or see:
+
 ``` r
 citation("ElevDistr")
 ```
 
 ## Further information
 
-A detailed description can be found on the [Wiki](https://github.com/LivioBaetscher/ElevDistr/wiki) or the package vignette.
+A detailed description can be found on the
+[Wiki](https://github.com/LivioBaetscher/ElevDistr/wiki) or the package
+vignette.
